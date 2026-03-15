@@ -1,0 +1,17 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.17.4
+  generator: "Rime::SwitcherSettings"
+  modified_time: "Mon Mar  9 21:01:45 2026"
+  rime_version: 1.13.1
+patch:
+  schema_list:
+    - {schema: rime_ice}
+  "menu/page_size": 10
+  "hotkeys/toggle": "Control+period"
+  "speller/auto_select": false
+  #  兼容搜狗的逻辑,可以在输入的时候 按下-当成一个字符 而不是前一页
+  "key_binder/bindings":
+    - { when: paging, accept: minus, send: Page_Up }
+    - { when: has_menu, accept: minus, send: minus }
+    - { when: has_menu, accept: equal, send: Page_Down }
